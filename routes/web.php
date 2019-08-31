@@ -12,8 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return response()->json([
+        'status' => 'ok',
+        'message' => 'recipe-api-v1.0.0'
+    ]);
+})->name('index');
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 Route::get('/recipes', function () {
